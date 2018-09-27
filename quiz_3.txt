@@ -33,20 +33,20 @@ GRANT CREATE SESSION, CRATE TABLE TO usuario_2;
 
 
 
+create table attacks (
+	id INT,
+	url VARCHAR(2048),
+	ip_address VARCHAR(20),
+	number_of_attacks INT,
+	time_of_last_attack TIMESTAMP
+);
+
+
+SELECT *
+FROM attacks
 
 
 
-
-
-
-
-
-
-CREATE TABLE ATTACKS (
-ID INTEGER,
-URL VARCHAR2(2048),
-IP_ADRRESS VARCHAR2(255),
-NUMBER_OF_ATTACKS INTEGER,
-TIME_OF_LAST_ATTACK TIMESTAMP 
-);abc
-abc
+SELECT COUNT (URL)
+FORM attacks
+WHERE PROTOCOL IN (https)abc
