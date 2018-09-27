@@ -1,1 +1,51 @@
-abc
+
+
+Create tablespace quiz 
+datafile 'DF_01.dbf' size 15Mb,
+datafile 'DF_02.dbf' size 15Mb,
+datafile 'DF_03.dbf' size 15Mb;
+
+
+
+CREATE PROFILE student LIMIT
+CONNECT TIME 20 
+
+create user usuario_1
+identified BY usuario_1
+DEFAULT TABLESPACE quiz
+QUOTA ON 10M 
+ON quiz;
+
+grant connect to usuario_1;
+GRANT CREATE SESSION, CRATE TABLE TO usuario_1;
+
+
+
+create user usuario_2
+identified BY usuario_21
+DEFAULT TABLESPACE quiz
+QUOTA ON 10M 
+ON quiz;
+
+grant connect to usuario_2;
+GRANT CREATE SESSION, CRATE TABLE TO usuario_2;
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE ATTACKS (
+ID INTEGER,
+URL VARCHAR2(2048),
+IP_ADRRESS VARCHAR2(255),
+NUMBER_OF_ATTACKS INTEGER,
+TIME_OF_LAST_ATTACK TIMESTAMP 
+);abc
